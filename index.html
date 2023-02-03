@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+        <div id="hh">
+            <input type="number" id="mm" placeholder="colum">
+            <input type="number" name="" id="ss" placeholder="row">
+        </div>
+        <select name="" id="getSign">
+            <option value="+">addition</option>
+            <option value="-">substraction</option>
+            <option value="*">mutiplication</option>
+            <option  value="/">division</option>
+        </select>
+        <button onclick="myFunct()">display</button>
+    </section>
+        <table id="item"></table>
+    <script type="text/javascript">
+        function myFunct(){
+            item.innerHTML = '';
+            for ( var i = 1; i <=  mm.value; i++){
+            let tab = '<tr>'
+                for ( var j = 1; j <= ss.value; j++){
+                    tab += '<td>' + j + getSign.value + i + '=' + eval( j+ getSign.value + i ) +"</td>" ;
+                }
+            tab += '</tr>';
+            item.innerHTML += tab;
+    }
+}
+    </script>
+    </body>
+</html>
